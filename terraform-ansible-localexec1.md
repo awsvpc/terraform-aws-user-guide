@@ -1,4 +1,5 @@
-
+<pre>
+  
 provider "aws" {
   region = "us-east-1"  # Change to your desired region
 }
@@ -45,3 +46,5 @@ resource "null_resource" "ansible_provisioner" {
     command = "ansible-playbook -i '${aws_instance.example.public_ip},' -u ubuntu --private-key=~/.ssh/your_private_key.pem playbook.yml"
   }
 }
+
+</pre>
